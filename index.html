@@ -30,15 +30,15 @@
               <input id="prepMinutes" type="number" min="0" step="1" />
             </label>
           </div>
-          <p class="meta" id="therapyMinutesMeta"></p>
+          <p id="therapyMinutesMeta" class="meta"></p>
         </div>
 
         <div class="card">
           <div class="card-header">
             <h2>2) 大枠メニュー</h2>
-            <button id="addSectionBtn" class="btn ghost">+ 追加</button>
+            <button id="addSectionBtn" class="btn ghost" type="button">+ 追加</button>
           </div>
-          <p class="meta" id="sectionSumMeta"></p>
+          <p id="sectionSumMeta" class="meta"></p>
           <div id="sectionsList" class="stack"></div>
         </div>
 
@@ -50,8 +50,8 @@
               <input id="templateNameInput" type="text" maxlength="40" placeholder="例: 全身120分" />
             </label>
             <div class="actions">
-              <button id="saveTemplateBtn" class="btn primary">保存</button>
-              <button id="duplicateTemplateBtn" class="btn">複製保存</button>
+              <button id="saveTemplateBtn" class="btn primary" type="button">保存</button>
+              <button id="duplicateTemplateBtn" class="btn" type="button">複製保存</button>
             </div>
             <label class="field">
               <span>保存済みテンプレート</span>
@@ -59,57 +59,59 @@
             </label>
           </div>
           <div class="actions inline">
-            <button id="loadTemplateBtn" class="btn">読み込み</button>
-            <button id="deleteTemplateBtn" class="btn danger">削除</button>
+            <button id="loadTemplateBtn" class="btn" type="button">読み込み</button>
+            <button id="deleteTemplateBtn" class="btn danger" type="button">削除</button>
           </div>
         </div>
 
         <div class="sticky-actions">
-          <button id="goRunBtn" class="btn huge primary">実行画面へ</button>
+          <button id="goRunBtn" class="btn huge primary" type="button">実行画面へ</button>
         </div>
       </section>
 
       <section id="runScreen" class="screen" aria-label="実行画面">
-        <div class="card timer-card" id="timerCard">
+        <div id="timerCard" class="card timer-card">
           <p class="chip">現在の工程</p>
           <h2 id="currentStepName" class="step-name">-</h2>
           <div id="currentStepTime" class="big-time">00:00</div>
-          <p class="meta" id="nextStepMeta">次: -</p>
-          <p class="meta" id="overallRemainingMeta">全体残り: 00:00</p>
+          <p id="nextStepMeta" class="meta">次: -</p>
+          <p id="overallRemainingMeta" class="meta">全体残り: 00:00</p>
           <progress id="progressBar" max="100" value="0"></progress>
-          <p class="meta" id="progressMeta">進捗 0 / 0</p>
+          <p id="progressMeta" class="meta">進捗 0 / 0</p>
         </div>
 
         <div class="card">
           <h2>操作</h2>
           <div class="controls-grid">
-            <button id="startBtn" class="btn primary">開始</button>
-            <button id="pauseBtn" class="btn">一時停止</button>
-            <button id="resumeBtn" class="btn">再開</button>
-            <button id="prevBtn" class="btn">前へ</button>
-            <button id="nextBtn" class="btn">次へ</button>
-            <button id="add30Btn" class="btn">+30秒</button>
-            <button id="add60Btn" class="btn">+1分</button>
-            <button id="sub30Btn" class="btn">-30秒</button>
-            <button id="sub60Btn" class="btn">-1分</button>
-            <button id="stopBtn" class="btn danger">全体停止</button>
-            <button id="restartBtn" class="btn ghost">最初から</button>
+            <button id="startBtn" class="btn primary" type="button">開始</button>
+            <button id="pauseBtn" class="btn" type="button">一時停止</button>
+            <button id="resumeBtn" class="btn" type="button">再開</button>
+            <button id="prevBtn" class="btn" type="button">前へ</button>
+            <button id="nextBtn" class="btn" type="button">次へ</button>
+            <button id="add30Btn" class="btn" type="button">+30秒</button>
+            <button id="add60Btn" class="btn" type="button">+1分</button>
+            <button id="sub30Btn" class="btn" type="button">-30秒</button>
+            <button id="sub60Btn" class="btn" type="button">-1分</button>
+            <button id="stopBtn" class="btn danger" type="button">全体停止</button>
+            <button id="restartBtn" class="btn ghost" type="button">最初から</button>
           </div>
           <div class="controls-grid two">
             <label class="field">
               <span>工程メモ (1行)</span>
-              <input id="stepMemoInput" maxlength="80" placeholder="例: 右肩の張り強め" />
+              <input id="stepMemoInput" type="text" maxlength="80" placeholder="例: 右肩の張り強め" />
             </label>
             <label class="toggle-row">
               <span>通知音</span>
               <input id="soundToggle" type="checkbox" checked />
             </label>
           </div>
-          <small class="meta">※ iPadの画面スリープはWeb側だけでは完全制御できないため、ガイドアクセスや画面自動ロック設定で対策してください。</small>
+          <small class="meta">
+            ※ iPadの画面スリープはWeb側だけでは完全制御できないため、ガイドアクセスや画面自動ロック設定で対策してください。
+          </small>
         </div>
 
         <div class="sticky-actions">
-          <button id="backToPlanBtn" class="btn huge">設定画面に戻る</button>
+          <button id="backToPlanBtn" class="btn huge" type="button">設定画面に戻る</button>
         </div>
       </section>
     </main>
